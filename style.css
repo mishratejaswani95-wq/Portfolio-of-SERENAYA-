@@ -1,0 +1,37 @@
+
+body {
+    background-color: #eee6d8;
+} 
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+
+    background-color: #fffdf7;
+    border-bottom: 1px solid #d8cdbd;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    text-decoration: none;
+    color: #4b3b2f;
+
+    font-family: Georgia, serif;
+    font-size: 14px;
+
+    transition: transform 0.2s ease;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.nav-item:hover {
+    transform: translateY(-4px);
+    color: #9b6b43;
+} 

@@ -292,7 +292,7 @@ header{
     border-radius:2px;
 
 } 
-.overlay-image{ href=
+.overlay-image{ href="overlay.png"
     position: absolute;
     top: 50%;
     left: 50%;

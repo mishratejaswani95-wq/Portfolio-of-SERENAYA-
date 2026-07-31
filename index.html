@@ -352,3 +352,175 @@
 </body>
 
 </html> 
+<!-- ===========================
+ART STUDIO
+=========================== -->
+
+<section class="art-gallery">
+
+    <div class="container">
+
+        <h1>Art Studio</h1>
+
+        <p class="intro">
+            A collection of observations, quiet moments, and imagined places.
+            Each piece is created with patience and curiosity, inspired by
+            nature, memories, and stories waiting to be told.
+        </p>
+
+        <blockquote>
+            "Art enables us to find ourselves and lose ourselves at the same time."
+        </blockquote>
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="filter-buttons">
+
+            <button class="filter active" data-filter="all">
+                All Works
+            </button>
+
+            <button class="filter" data-filter="watercolour">
+                Watercolour
+            </button>
+
+            <button class="filter" data-filter="botanical">
+                Botanical
+            </button>
+
+            <button class="filter" data-filter="sketch">
+                Sketches
+            </button>
+
+            <button class="filter" data-filter="oilpastel">
+                Oil Pastel
+            </button>
+
+            <button class="filter" data-filter="digital">
+                Digital
+            </button>
+
+        </div>
+
+
+        <!-- GALLERY -->
+
+        <div class="gallery">
+
+            <!-- Artwork 1 -->
+
+            <div class="frame watercolour botanical">
+
+                <img src="images/art1.jpg"
+                     alt="Artwork"
+                     onclick="openArtwork(this,
+                     'Morning Meadow',
+                     'A delicate watercolour inspired by early morning light and the quiet beauty of wildflowers. This text is only a placeholder and can later be replaced with your own description.')">
+
+            </div>
+
+
+            <!-- Artwork 2 -->
+
+            <div class="frame sketch">
+
+                <img src="images/art2.jpg"
+                     alt="Artwork"
+                     onclick="openArtwork(this,
+                     'Forest Study',
+                     'Sample description goes here.')">
+
+            </div>
+
+
+            <!-- Artwork 3 -->
+
+            <div class="frame botanical watercolour">
+
+                <img src="images/art3.jpg"
+                     alt="Artwork"
+                     onclick="openArtwork(this,
+                     'Wild Fern',
+                     'Sample description goes here.')">
+
+            </div>
+
+
+            <!-- Artwork 4 -->
+
+            <div class="frame digital">
+
+                <img src="images/art4.jpg"
+                     alt="Artwork"
+                     onclick="openArtwork(this,
+                     'Dreamscape',
+                     'Sample description goes here.')">
+
+            </div>
+
+
+            <!-- Artwork 5 -->
+
+            <div class="frame oilpastel">
+
+                <img src="images/art5.jpg"
+                     alt="Artwork"
+                     onclick="openArtwork(this,
+                     'Golden Afternoon',
+                     'Sample description goes here.')">
+
+            </div>
+
+
+            <!-- Artwork 6 -->
+
+            <div class="frame sketch">
+
+                <img src="images/art6.jpg"
+                     alt="Artwork"
+                     onclick="openArtwork(this,
+                     'Portrait Study',
+                     'Sample description goes here.')">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===========================
+POPUP
+=========================== -->
+
+<div id="artPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close">&times;</span>
+
+        <img id="popupImage" src="" alt="Artwork">
+
+        <div class="popup-text">
+
+            <h2 id="popupTitle"></h2>
+
+            <p id="popupDescription"></p>
+
+            <a href="https://etsy.com"
+               target="_blank"
+               class="etsy-btn">
+
+                Buy on Etsy
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div> 

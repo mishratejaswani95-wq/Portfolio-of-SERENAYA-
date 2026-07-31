@@ -1,0 +1,901 @@
+/* ==========================================
+GOOGLE FONTS
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ==========================================
+RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#f5efe4;
+    color:#3d3128;
+
+    font-family:"Inter",sans-serif;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+CONTAINER
+========================================== */
+
+.container{
+
+    width:min(1200px,90%);
+    margin:auto;
+
+}
+
+/* ==========================================
+ART SECTION
+========================================== */
+
+.art-gallery{
+
+    padding:110px 0;
+
+}
+
+/* ==========================================
+TITLE
+========================================== */
+
+.art-gallery h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:4rem;
+
+    text-align:center;
+
+    color:#3d2f23;
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================
+INTRO
+========================================== */
+
+.intro{
+
+    max-width:720px;
+
+    margin:auto;
+
+    text-align:center;
+
+    color:#6f6258;
+
+    font-size:1.06rem;
+
+    margin-bottom:45px;
+
+}
+
+/* ==========================================
+QUOTE
+========================================== */
+
+blockquote{
+
+    width:fit-content;
+
+    margin:0 auto 60px;
+
+    padding:18px 34px;
+
+    border-left:4px solid #a07d58;
+
+    font-style:italic;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.35rem;
+
+    color:#7b6650;
+
+    background:#faf6ef;
+
+}
+
+/* ==========================================
+FILTER BUTTONS
+========================================== */
+
+.filter-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:70px;
+
+}
+
+.filter{
+
+    border:none;
+
+    background:white;
+
+    color:#5d4a3c;
+
+    padding:12px 26px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    font-family:"Inter",sans-serif;
+
+    transition:.35s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+}
+
+.filter:hover{
+
+    transform:translateY(-4px);
+
+    background:#ebe0d1;
+
+}
+
+.filter.active{
+
+    background:#6d5038;
+
+    color:white;
+
+}
+
+/* ==========================================
+SMALL DECORATIVE LINE
+========================================== */
+
+.art-gallery h1::after{
+
+    content:"";
+
+    display:block;
+
+    width:85px;
+
+    height:2px;
+
+    background:#b49473;
+
+    margin:18px auto 0;
+
+}
+
+/* ==========================================
+SECTION SPACING
+========================================== */
+
+section{
+
+    overflow:hidden;
+
+}
+/* ==========================================
+GALLERY
+========================================== */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:55px;
+
+    align-items:start;
+
+}
+
+/* ==========================================
+FRAME
+========================================== */
+
+.frame{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:18px;
+
+    background:#7b5b3c;
+
+    border:8px solid #5e4229;
+
+    border-radius:3px;
+
+    box-shadow:
+        0 10px 22px rgba(0,0,0,.18),
+        inset 0 0 0 2px rgba(255,255,255,.08),
+        inset 0 0 12px rgba(0,0,0,.25);
+
+    transition:.45s;
+
+    cursor:pointer;
+
+    position:relative;
+
+}
+
+/* ==========================================
+WOOD GRAIN
+========================================== */
+
+.frame::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,.04) 0px,
+    rgba(255,255,255,.04) 2px,
+    transparent 2px,
+    transparent 7px);
+
+    pointer-events:none;
+
+    opacity:.45;
+
+}
+
+/* ==========================================
+INNER MOUNT
+========================================== */
+
+.frame::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:18px;
+
+    background:#f8f5ef;
+
+    border:1px solid #e6ddcf;
+
+    z-index:0;
+
+}
+
+/* ==========================================
+IMAGE
+========================================== */
+
+.frame img{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    border:10px solid #faf8f4;
+
+    box-shadow:
+
+    0 6px 18px rgba(0,0,0,.18);
+
+    transition:.45s;
+
+}
+
+/* ==========================================
+HOVER
+========================================== */
+
+.frame:hover{
+
+    transform:
+
+    translateY(-10px)
+
+    rotate(-1deg);
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.25);
+
+}
+
+.frame:nth-child(even):hover{
+
+    transform:
+
+    translateY(-10px)
+
+    rotate(1deg);
+
+}
+
+.frame:hover img{
+
+    transform:scale(1.03);
+
+}
+
+/* ==========================================
+SOFT SHADOW
+========================================== */
+
+.frame{
+
+    filter:drop-shadow(0 12px 18px rgba(0,0,0,.12));
+
+}
+
+/* ==========================================
+FADE ANIMATION
+========================================== */
+
+.frame{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.frame:nth-child(2){
+
+    animation-delay:.1s;
+
+}
+
+.frame:nth-child(3){
+
+    animation-delay:.2s;
+
+}
+
+.frame:nth-child(4){
+
+    animation-delay:.3s;
+
+}
+
+.frame:nth-child(5){
+
+    animation-delay:.4s;
+
+}
+
+.frame:nth-child(6){
+
+    animation-delay:.5s;
+
+}
+
+/* ==========================================
+KEYFRAMES
+========================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================
+POPUP OVERLAY
+========================================== */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(30,24,18,.72);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+/* JavaScript will add this class */
+
+.popup.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ==========================================
+POPUP CONTENT
+========================================== */
+
+.popup-content{
+
+    background:#fbf8f3;
+
+    width:min(1000px,95vw);
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.28);
+
+    animation:popupAppear .4s ease;
+
+}
+
+/* ==========================================
+POPUP IMAGE
+========================================== */
+
+#popupImage{
+
+    display:block;
+
+    width:100%;
+
+    max-height:70vh;
+
+    object-fit:contain;
+
+    background:#fff;
+
+    border:14px solid #f7f3ec;
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,.18);
+
+}
+
+/* ==========================================
+TEXT
+========================================== */
+
+.popup-text{
+
+    margin-top:35px;
+
+    text-align:center;
+
+}
+
+.popup-text h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2.5rem;
+
+    color:#3f3126;
+
+    margin-bottom:18px;
+
+}
+
+.popup-text p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#66594d;
+
+    line-height:1.9;
+
+    font-size:1rem;
+
+}
+
+/* ==========================================
+ETSY BUTTON
+========================================== */
+
+.etsy-btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:14px 34px;
+
+    border-radius:50px;
+
+    background:#6d5038;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    transition:.35s;
+
+    box-shadow:
+    0 10px 20px rgba(109,80,56,.25);
+
+}
+
+.etsy-btn:hover{
+
+    background:#8b694b;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+CLOSE BUTTON
+========================================== */
+
+.close{
+
+    position:absolute;
+
+    top:30px;
+
+    right:40px;
+
+    font-size:2.5rem;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    user-select:none;
+
+}
+
+.close:hover{
+
+    transform:rotate(90deg);
+
+    color:#f0d9b8;
+
+}
+
+/* ==========================================
+POPUP ANIMATION
+========================================== */
+
+@keyframes popupAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px) scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+} 
+/* ==========================================
+FILTER ANIMATION
+========================================== */
+
+.frame{
+
+    transition:
+        transform .4s ease,
+        opacity .35s ease,
+        scale .35s ease;
+
+}
+
+.frame.hide{
+
+    opacity:0;
+
+    transform:scale(.9);
+
+    pointer-events:none;
+
+    position:absolute;
+
+}
+
+/* ==========================================
+SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#efe6d9;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#9c7b5b;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#7c6046;
+
+}
+
+/* ==========================================
+TEXT SELECTION
+========================================== */
+
+::selection{
+
+    background:#b08b63;
+
+    color:white;
+
+}
+
+/* ==========================================
+FOCUS
+========================================== */
+
+button:focus,
+a:focus{
+
+    outline:2px solid #9a7655;
+
+    outline-offset:4px;
+
+}
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .art-gallery h1{
+
+        font-size:3.2rem;
+
+    }
+
+    .gallery{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:35px;
+
+    }
+
+    .popup-content{
+
+        padding:25px;
+
+    }
+
+}
+
+/* ==========================================
+TABLETS
+========================================== */
+
+@media(max-width:768px){
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+    }
+
+    .filter-buttons{
+
+        gap:10px;
+
+    }
+
+    .filter{
+
+        padding:10px 18px;
+
+        font-size:.9rem;
+
+    }
+
+    .popup-text h2{
+
+        font-size:2rem;
+
+    }
+
+}
+
+/* ==========================================
+PHONES
+========================================== */
+
+@media(max-width:500px){
+
+    .art-gallery{
+
+        padding:70px 0;
+
+    }
+
+    .art-gallery h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .intro{
+
+        font-size:.95rem;
+
+    }
+
+    blockquote{
+
+        font-size:1.05rem;
+
+        padding:15px 20px;
+
+    }
+
+    .popup{
+
+        padding:18px;
+
+    }
+
+    .popup-content{
+
+        border-radius:12px;
+
+        padding:18px;
+
+    }
+
+    #popupImage{
+
+        border-width:8px;
+
+    }
+
+    .popup-text h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .popup-text p{
+
+        font-size:.95rem;
+
+    }
+
+    .etsy-btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .close{
+
+        right:20px;
+
+        top:15px;
+
+        font-size:2rem;
+
+    }
+
+}
+
+/* ==========================================
+FOOTER
+========================================== */
+
+footer{
+
+    text-align:center;
+
+    padding:80px 20px;
+
+    color:#766455;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.25rem;
+
+} 
